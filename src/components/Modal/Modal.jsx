@@ -29,25 +29,13 @@ class Modal extends Component {
     }
   }
 
-  render() {
+    render() {
     return (
-      createPortal(
-        <div className={css.overlay} onClick={this.handleBackdropClick}>
+      <div className={css.overlay} onClick={this.handleBackdropClick}>
         <div className={css.modal}>{this.props.children}</div>
-        </div>,
-        modalRoot,
-    )
+      </div>
     )
   }
-
-  //якщо без портала
-  //   render() {
-  //   return (
-  //     <div className={css.overlay} onClick={this.handleBackdropClick}>
-  //       <div className={css.modal}>{this.props.children}</div>
-  //     </div>
-  //   )
-  // }
 }
 
 Modal.propTypes = {
